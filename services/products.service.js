@@ -1,16 +1,15 @@
-const faker = require("faker");
+const faker = require('faker');
 
 class ProductsService {
-
-  constructor(){
+  constructor() {
     this.products = [];
     this.generate();
   }
 
-  generate(){
+  generate() {
     const limit = 100;
 
-    for (let i = 0; i < limit; i++){
+    for (let i = 0; i < limit; i++) {
       this.products.push({
         id: faker.datatype.uuid(),
         // id: i+1,
@@ -18,30 +17,22 @@ class ProductsService {
         price: parseInt(faker.commerce.price(), 10),
         image: faker.image.imageUrl(),
       });
-    };
-
+    }
   }
 
-  create() {
-
-  }
+  create() {}
 
   find() {
     return this.products;
   }
 
   findOne(id) {
-    return this.products.find(item => item.id === id);
+    return this.products.find((item) => item.id === id);
   }
 
-  update() {
+  update() {}
 
-  }
-
-  delete() {
-
-  }
-
+  delete() {}
 }
 
 module.exports = ProductsService;

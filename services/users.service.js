@@ -1,34 +1,17 @@
-
 class UsersService {
+  constructor() {}
 
-  constructor(){
+  generate() {}
 
-  }
+  create() {}
 
-  generate(){
+  find() {}
 
-  }
+  findOne() {}
 
-  create() {
+  update() {}
 
-  }
-
-  find() {
-
-  }
-
-  findOne() {
-  }
-
-  update() {
-
-  }
-
-  delete() {
-
-  }
-
+  delete() {}
 }
-
 
 module.exports = UsersService;
