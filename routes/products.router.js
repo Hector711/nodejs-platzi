@@ -1,8 +1,7 @@
 const express = require('express');
-const ProductsService = require('../services/products.service')
-
 const router = express.Router();
 
+const ProductsService = require('../services/products.service')
 const service = new ProductsService();
 
 
@@ -19,18 +18,9 @@ router.get('/filter', (req, res)=> {
 router.get('/:id', (req, res) => {
   // const id = req.params.id;
   const { id } = req.params;
+  const product = service.findOne(id);
+  res.json(product);
 
-  if (id === '999'){
-    res.status(404).json({
-      message: "not found"
-    })
-  } else {
-    res.json({
-    id,
-    name: "product 2",
-    price: 2000
-    });
-  }
 
 })
 

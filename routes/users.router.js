@@ -1,8 +1,9 @@
 const express = require
 ('express');
-
 const router = express.Router();
 
+const UsersService = require('../services/users.service')
+const service = new UsersService();
 
 
 router.get('/', (req, res) => {
